@@ -91,6 +91,7 @@ def pow(M, p, modulus):
         return (M * pow(M, p - 1, modulus)) % modulus
     X = pow(M, p/2, modulus)
     return (X * X) % modulus 
+```
 
 Wrapping that all up we get [this](solve.py) scripts which allows us to get the 
 flag: `CTF-BR{It-wAs-jUsT-a-ReCURsIVe-SequenCE-to-BE-coded-In-LOGN-XwmIBVyZ5QEC}`
