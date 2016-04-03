@@ -36,8 +36,8 @@ output:
 
 First we determine the formula for n'th element:
 
-> f(x) = 1, for x in in range <1,4> (inclusive) 
-> f(x) = 4*f(x-1) + 3*f(x-2) + 2*f(x-3) + f(x-4)
+>f(x) = 1, for x in in range <1,4> (inclusive) 
+>f(x) = 4*f(x-1) + 3*f(x-2) + 2*f(x-3) + f(x-4)
 
 The problem is that we have to calculate the value of the formula for a large n
 and doing it recusively is not feasible.
