@@ -43,6 +43,7 @@ and doing it recusively is not feasible.
 is a nice article how to solve recurrence problems efficiently.
 
 Following article we found the characteristic A matrix to be:
+
 |**0**|**1**|**0**|**0**|
 |:--:|:--:| :--:| :--:|
 |**0**|**0**|**1**|**0**|
@@ -50,6 +51,7 @@ Following article we found the characteristic A matrix to be:
 |**1**|**2**|**3**|**4**|
 
 and initial vector v:
+
 |**1**|
 |:--:|:
 |**1**|
@@ -60,6 +62,7 @@ which is more or less direct application of recursive formula. The n'th element
 is the last element of vector A^n * v. Now we need also sum. Let us extend the
 matrix A to calculate the sum as well. We store the sum in the last element of
 vector. Matirx A is now:
+
 |**0**|**1**|**0**|**0**|**0**|
 |:--:|:--:| :--:| :--:|:--:|
 |**0**|**0**|**1**|**0**|**0**|
@@ -68,6 +71,7 @@ vector. Matirx A is now:
 |**1**|**2**|**3**|**4**|**1**|
 
 and initial vector v:
+
 |**1**|
 |:--:|:
 |**1**|
