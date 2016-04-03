@@ -84,7 +84,7 @@ and initial vector v:
 
 The n'th element and a sum are (A^n * v)[3] and (A^n * v)[4]. Now all we need to
 do is to power matrix A efficiently modulo 10^9 which is easily implemented in
-python:
+Python:
 
 ```python
 def pow(M, p, modulus):
