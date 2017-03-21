@@ -12,9 +12,9 @@
 ## Write-up
 
 In the [zip file](py_d5764c66f02cccdb356c532d60d4d079.zip) we can find crypt.pyc and an encrypted flag `encrypted_flag`.
-When we tried using [Python dissasembler] (https://nedbatchelder.com/blog/200804/the_structure_of_pyc_files.html), we get 
-errors. We modified [dis.py] file so the dissambly passes without errors. Here is the result of 
-running [demarshal.py]:
+When we tried using [Python dissasembler](https://nedbatchelder.com/blog/200804/the_structure_of_pyc_files.html), we get 
+errors. We modified [dis.py](dis.py) file so the dissambly passes without errors. Here is the result of 
+running [demarshal.py](demarshal.py):
 
     magic 03f30d0a
     moddate 66346f58 (Fri Jan  6 07:08:38 2017)
@@ -223,11 +223,11 @@ running [demarshal.py]:
  * From number of variable names and argument count we can see that functions take parameter `data`
  * There are local variables in funtions `key_a`, `key_b`, `key_c`, `secret`, `rot`
  * Some opcodes appear not to be scrambled, e.g. `RETURN_VALUE` and `CALL_FUNCTION`
-Let us create a file [test.py] that we can use as reference. We try to make it decompile to the similar code as crypt.pyc.
+Let us create a file [test.py](test.py) that we can use as reference. We try to make it decompile to the similar code as crypt.pyc.
 We make a wild guess that 'key_a`, 'key_b` and `key_c` are assigned constants indexed from `1` to `3` based on `6` first lines of 
 dissasembled code.
 
-Here is the result of dissasembling [test.py]
+Here is the result of dissasembling [test.py](test.py)
 
     magic 03f30d0a
     moddate dcc9d058 (Tue Mar 21 07:36:12 2017)
@@ -355,6 +355,6 @@ Counting variables on the stack, we can see that those should be binary operatio
 and since we calculate the value of `secret` we can assume string operations. 
 Guessing that `39` is `BINARY_ADD` was easy. Assigning `70` to `BINARY_MULTIPLY` took us 
 a bit more time as we tried all possible different binary operations on string like `SLICE+1` etc.
-With those two last opcodes we can construct the algorithm to encrypt/decrypt [solve.py].
+With those two last opcodes we can construct the algorithm to encrypt/decrypt [solve.py](solve.py).
 Running `python solve.py` gives us the flag:
     flag{Gue55_opcode_G@@@me 
