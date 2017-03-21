@@ -306,7 +306,7 @@ opcodes can be deciphered:
 Now looking at documentation of `rotor` module and seeing that
     rot = rotor.newrotor(secret)
     return rot.decrypt(data)
-decompiles to (assuming secret is local variable):
+decompiles to (assuming `secret` is local variable):
 
       8          24 LOAD_GLOBAL          116       0 (rotor)
                  27 LOAD_ATTR            106       1 (newrotor)
