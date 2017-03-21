@@ -358,5 +358,7 @@ and since we calculate the value of `secret` we can assume string operations.
 Guessing that `39` is `BINARY_ADD` was easy. Assigning `70` to `BINARY_MULTIPLY` took us 
 a bit more time as we tried all possible different binary operations on string like `SLICE+1` etc.
 With those two last opcodes we can construct the algorithm to encrypt/decrypt [solve.py](solve.py).
+
 Running `python solve.py` gives us the flag:
+
     flag{Gue55_opcode_G@@@me 
