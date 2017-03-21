@@ -361,4 +361,4 @@ With those two last opcodes we can construct the algorithm to encrypt/decrypt [s
 
 Running `python solve.py` gives us the flag:
 
-    flag{Gue55_opcode_G@@@me 
+    flag{Gue55_opcode_G@@@me}
