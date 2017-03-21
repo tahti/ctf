@@ -296,11 +296,13 @@ Here is the result of dissasembling [test.py](test.py)
 
 Comparing both outputs of dissasembly we can easily see that the following
 opcodes can be deciphered:
- * `153` is `LOAD_CONST`
- * `134` is `IMPORT_NAME`
- * `145` is `STORE_NAME`
- * `136` is `MAKE_FUNCTION`
- * `104` is `STORE_FAST`
+
+- `153` is `LOAD_CONST`
+- `134` is `IMPORT_NAME`
+- `145` is `STORE_NAME`
+- `136` is `MAKE_FUNCTION`
+- `104` is `STORE_FAST`
+
 Now looking at documentation of `rotor` module and seeing that
     rot = rotor.newrotor(secret)
     return rot.decrypt(data)
